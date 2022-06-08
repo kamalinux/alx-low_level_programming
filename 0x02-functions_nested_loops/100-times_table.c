@@ -15,10 +15,13 @@ void print_times_table(int n)
 		{
 			_putchar(0);
 
-			for (y = 1; y <= n; y++)
+			for (y = 0; y <= n; y++)
 			{
+				if (y != 0)
+				{
 				_putchar(',');
 				_putchar(' ');
+				}
 
 				z = x * y;
 
