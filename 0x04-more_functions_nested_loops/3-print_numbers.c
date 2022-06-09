@@ -3,20 +3,16 @@
 /**
  * print_numbers - _putchar the numbers, from 0 to 9, followed by a new line
  *
- * Return: Always (Success)
+ * Return: no return
  */
 
 void print_numbers(void)
 {
-	_putchar('0');
-	_putchar('1');
-	_putchar('2');
-	_putchar('3');
-	_putchar('4');
-	_putchar('5');
-	_putchar('6');
-	_putchar('7');
-	_putchar('8');
-	_putchar('9');
+	int ch;
+
+	for (ch = 48; ch < 58; ch++)
+	{
+		_putchar(ch);
+	}
 	_putchar('\n');
 }
