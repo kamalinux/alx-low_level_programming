@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - main function
+ * main - prints its name, followed by a new line.
  * @argc: argumentc
  * @argv: vector of arguments
  *Return: always 0
