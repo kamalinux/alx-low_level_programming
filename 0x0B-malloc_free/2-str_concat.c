@@ -3,29 +3,32 @@
 #include <stdlib.h>
 
 /**
- * str_concat - concatenates two strings
+ * _strdup - returns a pointer to a newly allocated space in memory.
  * @str: string.
  *
- * Return: Always 0.
+ * Return: pointer of an array of chars
  */
-char *_strdup(char *str)
+char *str_concat(char *s1, char *s2)
 {
-	char *strout;
-	unsigned int i, j;
+	int i, j, size;
+	char *a;
 
-	if (str == NULL)
-		return (NULL);
-
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; s1[i] != '\0'; i++)
 		;
-
-	strout = (char *)malloc(sizeof(char) * (i + 1));
-
-	if (strout == NULL)
+	for (j = 0; s2[j] != '\0'; j++)
+		;
+	size = i + j + 1;
+	a = malloc(sizeof(char) * size);
+	if (a == 0)
 		return (NULL);
+	for (i = 0; s1[i] != '\0'; i++)
+	{
+		*(a + i) = *(s1 + i);
+	}
+	for (j = 0; s2[j] != '\0'; j++)
+	{
+		*(a + i + j) = *(s2 + j);
+	}
 
-	for (j = 0; j <= i; j++)
-		strout[j] = str[j];
-
-	return (strout);
+	return (a);
 }
