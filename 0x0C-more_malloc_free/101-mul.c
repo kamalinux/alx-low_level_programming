@@ -6,7 +6,9 @@
 /**
  * _is_zero - determines if any number is zero
  * @argv: argument vector.
- *
+ * @mul
+ * @num1
+ * @num2
  * Return: no return.
  */
 void _is_zero(char *argv[])
